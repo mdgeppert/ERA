@@ -1,97 +1,100 @@
-<!DOCTYPE HTML>
-
+<!DOCUMENT HTML>
 <html>
-<head>
-    <link href="homeStyle.css" rel="stylesheet" type="text/css" />
+    <head>
+    <link href="stylesheet.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    </script>
+    <script>
+        src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    </script>
+    <script>
+        src = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+    </script>
+    <script>
+        textFit(docuent.querySelector("#inningsLabel, #earnedRunsLabel, #innings, #earnedRuns"));
+    </script>
+
 </head>
-<title>Matthew Geppert - Home</title>
 
 <body>
-    <center>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-
-                    <h1 style="color: red">Welcome to the online portfolio of Matthew Geppert!</h1>
-                    <table class="menu">
-                        <tr>
-                            <td><br/></td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
-                            <td><strong class="columnHead">Pages to View</strong></td>
-
-                            <td><strong class="code">Code</strong></td>
-
-                        </tr>
-
-                        <tr>
-                            <td><a href="/resume/index.html" target="blank" class="menuText">My Resume</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="/adviceEngine/" target="blank" class="menuText">Advice Engine</a></td>
-
-
-                        </tr>
-                        <tr>
-                            <td><a href="/dashboard/" target="blank" class="menuText">Advisor Dashboard</a></td>
-
-                        </tr>
-                        <tr>
-                            <td><span class="menuText">AMEX credit card reconciliation application</span></td>
-
-                            <td><a href="https://github.com/mdgeppert/AMEX-Expenses" target="blank" class="menuText">View Code</a></td>
-                        </tr>
-                        <tr>
-                            <td><span class="menuText">Human Resources information page code</span></td>
-
-                            <td><a href="https://github.com/mdgeppert/SHERPA-HR-Page/tree/master/WebSite1" target="blank" class="menuText">View Code</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="/era/" target="blank" class="menuText">Earned Run Average Calculator</a></td>
-                            <td><a href="https://github.com/mdgeppert/ERA" class="menuText">View Code</a></td>
-                        </tr>
-                    </table>
+    <div class="container">
+        <div class="col-md-4">
+            <div class="column1">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-4">
+            <div class="col-100">
+                <div class="field">
                     <div class="container">
-                        <div class="col-md-2>"></div>
-                        <div class="col-md-8">
-                            <div style="width: 60%; margin-top: 5%">
-                                <p style="text-align: justify; width=50%;">Please note that AMEX and Human Resources are not displayed as a Web Application because they will not compile without the company's database and that many links in these sample pages won't work because they point to proprietary data that is not available to the general public.</p>
 
-                                <div id="returnEmail">Please send me your questions, comments or concerns <a href="mailto:mdgeppert@gmail.com">here.</a> Thank you.</div>
+                        <form action="/action_page.php" id="form">
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="innings" id="inningsLabel">Innings Pitched:</label>
+                                </div>
+                                <div class="container1">
+                                    <input type="text" name="inningsPitched" id="innings">
+                                </div>
+                                <div class="col-25">
+                                    <label for="earnedRuns" id="earnedRunsLabel">Earned Runs Allowed:</label>
+                                </div>
+                                <div class="container1">
+                                    <input type="text" name="earnedRuns" id="earnedRuns">
+                                </div>
+                                <div>
+                                    <input type="button" id="calculate" onclick="myFunction()" value="Calculate ERA">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-2"></div>
+                        </form>
+                        <p id="output"></p>
+
+
                     </div>
-                    <!-- Start of SimpleHitCounter Code -->
 
-                    <!-- End of SimpleHitCounter Code -->
 
-                    <p id="thanks">Thanks for viewing!</p>
-                    <p id="copyright">Copyright &#169; 2018</p>
-                    <!-- Start of StatCounter Code for Default Guide -->
-                    <script type="text/javascript">
-                        var sc_project = 11358661;
-                        var sc_invisible = 0;
-                        var sc_security = "522b182f";
-                        var scJsHost = (("https:" == document.location.protocol) ?
-                            "https://secure." : "http://www.");
-                        document.write("<sc" + "ript type='text/javascript' src='" +
-                            scJsHost +
-                            "statcounter.com/counter/counter.js'></" + "script>");
+                    <script>
+                        function myFunction(round, decimals) {
+                            var earnedRuns = document.getElementById("earnedRuns").value;
+                            var innings = document.getElementById("innings").value;
+                            var ERA = earnedRuns / innings * 9;
+                            var roundedERA = ERA.toFixed(2);
+                            document.getElementById("output").innerHTML = roundedERA;
+                        }
                     </script>
-                    <noscript>
-                    <div class="statcounter"><a title="web analytics"
-                    href="http://statcounter.com/" target="_blank"><img
-                    class="statcounter"
-                    src="//c.statcounter.com/11358661/0/522b182f/0/" alt="web
-                    analytics"></a></div>
-                </noscript>
-                    <!-- End of StatCounter Code for Default Guide -->
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-md-4">
+                <div class="column2">
                 </div>
             </div>
         </div>
-    </center>
+    </div>
+    <!-- Default Statcounter code for ERA
+http://mdgeppert.x10host.com/era -->
+<script type="text/javascript">
+var sc_project=11786914; 
+var sc_invisible=0; 
+var sc_security="f8b16f8e"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11786914/0/f8b16f8e/0/" alt="Web
+Analytics"></a></div></noscript>
+<!-- End of Statcounter Code -->
 </body>
+
 </html>
