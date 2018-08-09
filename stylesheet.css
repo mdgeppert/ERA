@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Bolby+One+SC');
+
+
+.field{
+    border: 2px solid black;
+    height: 25vh;
+    width: 24%;
+    margin-top: 10%;
+    display: inline-block;
+}
+
+#form{
+    margin-top: 3vh;
+    margin-left: -.5vh
+}
+.column1{
+    width: 37.5%;
+    height: 100%;
+    float: left;
+    margin-top: -.5%;
+}
+
+
+.column2{
+    width: 37.5%;
+    height: 100%;
+    float: right;
+    margin-top: -26%;
+}
+
+
+#output{
+    margin-left: 10vw;
+    margin-top: 1vh;
+    font-size: 1.9vw;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+#calculate{
+    margin-top: 4vh;
+    font-size: 1.3vw;
+    font-weight: 600;
+    margin-left: 7vw;
+    width: 11vw;
+    float: left;
+}
+
+#innings{
+    width:75%;
+    margin-left: 16vw;
+    margin-top: -2.5vh;
+    text-align: center;
+    background: yellow;
+    height: 2.5vh;
+    font-weight: 600;
+    font-family: arial;
+}
+
+#earnedRuns{
+    width: 75%;
+    margin-top: -2.5vh;
+    margin-left: 16vw;
+    text-align: center;
+    height: 2.5vh;
+    font-weight: 600;
+}
+
+#inningsLabel{
+    margin-left: 21%;
+    font-size: 1.3vw;
+    margin-top: -4%;
+    font-weight: 800;
+    float: left;
+}
+
+#earnedRunsLabel{
+    margin-top: 2.5vh;
+    font-size: 1.3vw;
+    float: left;
+    font-weight: 800;
+    margin-left: 5.5%
+}
+
+
+.container1{
+    width: 40%
+}
